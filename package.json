@@ -2,13 +2,21 @@
   "name": "vue-workspace",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "yarn workspaces run lint",
+    "build": "yarn workspaces run build",
+    "dev:admin": "yarn --cwd packages/admin dev",
+    "build:admin": "yarn --cwd packages/admin build",
+    "dev:home": "yarn --cwd packages/home dev",
+    "build:home": "yarn --cwd packages/home build"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

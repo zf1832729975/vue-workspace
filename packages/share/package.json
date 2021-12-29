@@ -1,0 +1,12 @@
+{
+  "name": "@project/share",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 没有打包",
+    "lint": "vue-cli-service lint"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "~4.5.0"
+  }
+}

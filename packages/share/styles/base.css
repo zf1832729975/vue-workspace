@@ -1,0 +1,337 @@
+/** 
+ !最基础的，尽量不要修改这里面的，这里面的最好是公用的类，就不管在什么项目中都能用的那种
+*/
+
+/* #region 重置 */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* #endregion 重置 */
+
+/* #region 定位、浮动 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.over-hide,
+.over-hidden,
+.overflow {
+  overflow: hidden;
+}
+
+.absolute {
+  position: absolute !important;
+}
+.relative {
+  position: relative !important;
+}
+
+.fixed,
+.pos-fixed {
+  position: fixed !important;
+}
+
+.pos-full {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.pos-left {
+  left: 0;
+}
+
+.pos-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.post-top {
+  bottom: 0;
+}
+.absolute-full {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* #endregion 定位、浮动 */
+
+/* #region 文本、效果、对齐 */
+.pointer {
+  cursor: pointer;
+}
+
+/* 打点显示 */
+.elli,
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.elli2,
+.ellipsis2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制在一个块元素显示的文本的行数 */
+  -webkit-box-orient: vertical; /* 垂直排列 */
+  word-break: break-all; /* 内容自动换行 */
+}
+
+.elli3,
+.ellipsis3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 限制在一个块元素显示的文本的行数 */
+  -webkit-box-orient: vertical; /* 垂直排列 */
+  word-break: break-all; /* 内容自动换行 */
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.v-middle {
+  vertical-align: middle;
+}
+
+.text-white {
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-gray {
+  color: #aaaaaa;
+}
+
+/* #endregion 文本、效果 */
+
+/* #region 布局, layout */
+.h-full {
+  height: 100% !important;
+}
+.h-half {
+  height: 50% !important;
+}
+.w-full {
+  width: 100% !important;
+}
+.w-half {
+  width: 50% !important;
+}
+
+/* 从大到小 优先 left、bottom */
+.padding-24,
+.p-24 {
+  padding: 24px !important;
+}
+.mt-24 {
+  margin-top: 24px !important;
+}
+.mr-24 {
+  margin-right: 24px !important;
+}
+.ml-24 {
+  margin-left: 24px !important;
+}
+.mb-24 {
+  margin-bottom: 24px !important;
+}
+
+padding-16,
+.p-16 {
+  padding: 16px !important;
+}
+.ml-16 {
+  margin-left: 16px !important;
+}
+.mr-16 {
+  margin-right: 16px !important;
+}
+.mt-16 {
+  margin-top: 16px !important;
+}
+.mb-16 {
+  margin-bottom: 16px !important;
+}
+.m-16 {
+  margin: 16px !important;
+}
+
+.ml-12 {
+  margin-left: 12px !important;
+}
+.mb-12 {
+  margin-bottom: 12px !important;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
+}
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.ml-8 {
+  margin-left: 8px !important;
+}
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+
+.mt-8 {
+  margin-top: 8 !important;
+}
+
+.ml-4 {
+  margin-left: 4px !important;
+}
+.mb-4 {
+  margin-bottom: 4px !important;
+}
+
+/* #endregion 布局, layout */
+
+/* #region flex */
+
+/* 
+main : 水平方向-主要方向
+cross: 垂直方向
+*/
+.flex {
+  display: flex;
+}
+.flex-main-justify {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-cross-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-cross-justify {
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* 先行后列 */
+.flex-justify-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* flex-center-center 缩写, 垂直居中  */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-box-0 {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.flex-box-1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.flex-dir-column,
+.flex-dir-top {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #endregion flex */
